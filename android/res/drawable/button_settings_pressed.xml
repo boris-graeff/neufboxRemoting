@@ -1,0 +1,4 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/grey" android:id="@+id/color"/>
+    <item android:drawable="@drawable/icon_settings_light" android:id="@+id/image" />
+</layer-list>

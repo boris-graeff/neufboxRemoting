@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f1f1f1"
+        android:padding="20dp">
+        
+        <ImageButton
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/button_save" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:text="@string/settings" />
+
+    </RelativeLayout>
+    
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:padding="20dp">
+	
+			<TextView
+			    android:id="@+id/loginLabel"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_alignParentTop="true"
+			    android:text="@string/login"
+			    android:textSize="16sp" />
+	
+			<EditText
+			    android:id="@+id/login"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_alignParentRight="true"
+			    android:layout_below="@+id/loginLabel"
+			    android:ems="10"
+			    android:padding="3dp" >
+	
+			    <requestFocus />
+			</EditText>
+			
+			<TextView
+			    android:id="@+id/ipAddressLabel"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/login"
+			    android:text="@string/ip_address"
+			    android:layout_marginTop="10dp"
+			    android:textSize="16sp" />
+	
+			<EditText
+			    android:id="@+id/ipAddress"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_alignRight="@+id/login"
+			    android:layout_below="@+id/ipAddressLabel"
+			    android:ems="10"
+			    android:padding="3dp" >
+	
+			</EditText>
+			
+			<TextView
+			    android:id="@+id/securityKeyLabel"
+			    android:layout_width="wrap_content"
+			    android:layout_below="@+id/ipAddress"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:text="@string/security_key"
+			    android:layout_marginTop="10dp"
+			    android:textSize="16sp" />
+	
+			<EditText
+			    android:id="@+id/securityKey"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_alignParentRight="true"
+			    android:layout_below="@+id/securityKeyLabel"
+			    android:ems="10"
+			    android:padding="3dp" />
+	
+	</RelativeLayout>
+</LinearLayout>

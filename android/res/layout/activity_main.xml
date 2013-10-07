@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f1f1f1"
+        android:padding="20dp">
+
+        <ImageButton
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/button_settings" />
+
+        <TextView
+            android:id="@+id/internetState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/internetLabel"
+            android:layout_alignBottom="@+id/internetLabel"
+            android:layout_toRightOf="@+id/internetLabel"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/internetLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Internet : "
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/boxLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/internetLabel"
+            android:layout_alignRight="@+id/internetLabel"
+            android:layout_below="@+id/internetLabel"
+            android:text="Box : "
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/boxState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/boxLabel"
+            android:layout_alignBottom="@+id/boxLabel"
+            android:layout_toRightOf="@+id/boxLabel"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:padding="20dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/icon_warning" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView1"
+            android:layout_toRightOf="@+id/imageView1"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:text="Params not set"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+   <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="20dp" >
+	
+	        <Switch
+	            android:id="@+id/hotspot"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentTop="true"
+	            android:textOn="On"
+	   			android:textOff="Off"
+	   			android:thumb="@drawable/switch_inner_holo_light"
+	       		android:track="@drawable/switch_track_holo_light"
+	            android:text="HotSpot" />
+	
+	        <Switch
+	            android:id="@+id/wlan"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignLeft="@+id/hotspot"
+	            android:layout_alignRight="@+id/hotspot"
+	            android:layout_below="@+id/hotspot"
+	            android:text="Wlan"
+	            android:thumb="@drawable/switch_inner_holo_light"
+	       		android:track="@drawable/switch_track_holo_light"
+	            android:textOff="Off"
+	            android:textOn="On" />
+	
+	        <TextView
+	            android:id="@+id/hotspotClientsLabel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignLeft="@+id/wlan"
+	            android:layout_below="@+id/wlan"
+	            android:layout_marginTop="15dp"
+	            android:textSize="16sp"
+	            android:textColor="#000000"
+	            android:text="Clients connected to hotspot" />
+	
+	      
+	         <fr.graeff.boris.neufboxRemoting.utils.ExpandableListView
+		         android:id="@+id/hotspotClients"
+		         android:layout_width="match_parent"
+		         android:layout_height="wrap_content"
+		         android:layout_alignLeft="@+id/hotspotClientsLabel"
+	            android:listSelector="@android:color/transparent"
+	            android:layout_below="@+id/hotspotClientsLabel"/>
+	
+	        <TextView
+	            android:id="@+id/wlanClientsLabel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignLeft="@+id/hotspotClients"
+	            android:layout_below="@+id/hotspotClients"
+	            android:layout_marginTop="15dp"
+	            android:textSize="16sp"
+	            android:textColor="#000000"
+	            android:text="Clients connected to wlan" />
+	        
+	      
+	        <fr.graeff.boris.neufboxRemoting.utils.ExpandableListView
+		         android:id="@+id/wlanClients"
+		         android:layout_width="match_parent"
+		         android:layout_height="wrap_content"
+		         android:layout_alignLeft="@+id/wlanClientsLabel"
+		         android:listSelector="@android:color/transparent"
+		         android:layout_below="@+id/wlanClientsLabel"/>
+	
+   		</RelativeLayout>
+    </ScrollView>
+</LinearLayout>
